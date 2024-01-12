@@ -14,9 +14,9 @@ while (intentos !== 6 && puntos !== palabras[i].length) {
     console.log(fallo)
     luser = sc("Escribe una letra y así salvarás a Pedro -> ")
     // Verificar si la letra ya está en aciertos
-    console.log(palabras[i].indexOf(luser))
+    console.log(palabras[i].indexOf(luser)+" IndexOF")
         for (let n = 0; n < palabras[i].length; n++) {
-            if (luser == palabras[i].charAt(n)&& !aciertos.includes(luser)) {
+            if (luser == palabras[i].charAt(n)&& !aciertos.includes(luser)){
                 fallo = false
                 aciertos.push(palabras[i].charAt(n))
                 puntos++
@@ -27,7 +27,9 @@ while (intentos !== 6 && puntos !== palabras[i].length) {
         intentos++
     }
     console.log("Has acertado "+puntos+ " letras")
-    console.log(aciertos)
+    for (let y = 0; y < aciertos.length; y++) {
+        console.log("La letra "+aciertos[y]+" se encuentra en la posición "+palabras[i].indexOf(aciertos[y]))
+    }
 }
 
 function escogerPalabra(palabras) {

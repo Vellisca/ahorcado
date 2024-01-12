@@ -21,11 +21,7 @@ for (let n = 0; n < palabras[i].length; n++) {
                 aciertos.push(palabras[i].charAt(n))
                 fallo=false
             }
-        
         }
-
-            
-
         puntos++
         console.log(fallo)
     }
@@ -37,6 +33,10 @@ if (fallo) {
 
 console.log("Has acertado "+puntos+ " letras")
 console.log(aciertos)
+for (let y = 0; y < aciertos.length; y++) {
+    console.log("La letra "+aciertos[y]+" se encuentra en la posición "+aciertos[y].indexOf+1)
+    
+}
 }
 
 //
