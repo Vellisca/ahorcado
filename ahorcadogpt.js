@@ -9,13 +9,10 @@ let intentos = 0
 let luser
 console.log(palabras[i])
 let aciertos = []
-
+repetirLetra()
 while (intentos !== 6 && puntos !== palabras[i].length) {
     fallo = true
-    console.log(fallo)
     luser = sc("Escribe una letra y así salvarás a Pedro -> ")
-    // Verificar si la letra ya está en aciertos
-    console.log(palabras[i].indexOf(luser)+" IndexOF")
         for (let n = 0; n < palabras[i].length; n++) {
             if (luser == palabras[i].charAt(n)&& !aciertos.includes(luser)){
                 fallo = false
@@ -39,6 +36,7 @@ function escogerPalabra(palabras) {
 }
 //s
 
+
 function contarVocales(palabras) {
     const vocales="aeiou";
     let numVocales = 0;
@@ -52,3 +50,8 @@ function contarVocales(palabras) {
     }
     console.log("El número total de vocales es: " +numVocales);  
 }
+
+function repetirLetra() {
+    console.log(palabras[1].split('a').length-1)
+}
+
