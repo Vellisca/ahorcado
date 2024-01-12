@@ -44,3 +44,26 @@ function escogerPalabra(palabras) {
     i=Math.floor(Math.random()*palabras.length)
     return palabras[i]
 }
+
+if (puntos === palabras[i].length) {
+    console.log("¡Felicidades! Has adivinado la palabra y salvado a Pedro.");
+} else {
+    console.log("Lo siento, has agotado todos tus intentos. La palabra era: " + palabras[i]);
+}
+
+function escogerPalabra(palabras) {
+    i = Math.floor(Math.random() * palabras.length);
+    return palabras[i];
+}
+
+function contarAciertos(aciertos) {
+    console.log("Cantidad de aciertos: " + aciertos.length);
+}
+
+function mostrarAciertos(aciertos) {
+    console.log("Letras acertadas: " + aciertos.join(", "));
+}
+
+function contarVidas(intentos) {
+    console.log("Vidas restantes: " + (6 - intentos));
+}
