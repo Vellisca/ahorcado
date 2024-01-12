@@ -44,3 +44,4 @@ function escogerPalabra(palabras) {
     i=Math.floor(Math.random()*palabras.length)
     return palabras[i]
 }
+//push nuevo array palabras spliteadas, cada letra lenght con for para contar numero letras repes
