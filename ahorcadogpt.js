@@ -4,6 +4,7 @@ let fallo = true
 let i = 0
 let puntos = 0
 escogerPalabra(palabras)
+contarVocales(palabras)
 let intentos = 0
 let luser
 console.log(palabras[i])
@@ -30,10 +31,27 @@ while (intentos !== 6 && puntos !== palabras[i].length) {
 }
 
 function escogerPalabra(palabras) {
-    i = Math.floor(Math.random() * palabras.length)
+    i = Math.floor(Math.random() * palabras.length) //es la funcion que escoge la palabra aleatoria y esta no se mostrará
     return palabras[i]
 }
 //s
+
+
+function contarVocales(palabras) {
+    const vocales="aeiou";
+    let numVocales = 0;
+    
+    for (let h = 0; h < palabras.length; h++) { //primer for que recorre la frase
+        for (let j= 0; j< vocales.length; j++) { //segundo for que recorre las vocales
+           if(palabras[i].charAt(h)==vocales.charAt(j)){ //igualamos la frase con las vocales es decir los dos for con charAt
+                numVocales=numVocales+1; //para que vaya acumulando 
+           }  
+        }
+    }
+    console.log("El número total de vocales es: " +numVocales);  
+}
+
 function repetirLetra() {
     console.log(palabras[1].split('a').length-1)
 }
+
