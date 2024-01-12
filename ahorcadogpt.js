@@ -35,5 +35,7 @@ function escogerPalabra(palabras) {
 }
 //s
 function repetirLetra() {
-    console.log(palabras[1].split('a').length-1)
+    console.log(palabras[i].split('a').length-1)
+
+    //push nuevo array palabras spliteadas, cada letra lenght con for para contar numero letras repes
 }
