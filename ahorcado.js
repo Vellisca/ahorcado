@@ -24,6 +24,7 @@ while (intentos !== 6 && puntos !== palabras[i].length) {
     //Dibuja a Pedro en función de cuantas veces se ha fallado
     DibujarPedro()
     luser = sc("Escribe una letra y así salvarás a Pedro, escribe pista si necesitas ayuda -> ")
+    validarUsuario();
     //Si el user escribe pista le dice las vocales que tiene la palabra
     if (luser == "pista") {
         contarVocales()
@@ -84,6 +85,16 @@ function contarVocales() {
         }
     }
     console.log("El número total de vocales es: " + numVocales);
+}
+
+function validarUsuario(){
+    // esta funcion valida que el usuario solo pueda escribir una letra por turno o la palabra pista pero que no pueda escribir numero
+    if(!Number (luser)&& luser.length==1 || luser=="pista"){
+
+    }else{
+        console.log("Error, debes introducir una letra o la palabra pista");
+        fallo=false //ponemos los fallos en false para que no nos quite vida
+    }
 }
 //
 
