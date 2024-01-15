@@ -35,7 +35,6 @@ console.log("Has acertado "+puntos+ " letras")
 console.log(aciertos)
 for (let y = 0; y < aciertos.length; y++) {
     console.log("La letra "+aciertos[y]+" se encuentra en la posición "+aciertos[y].indexOf+1)
-    
 }
 }
 
