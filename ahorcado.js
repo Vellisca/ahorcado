@@ -43,11 +43,10 @@ while (intentos !== 6 && espacios!=palabras[i]) {
             }
             //Muestra de las letras acertadas su posición. 
             if (luser==palabras[i].charAt(n)) {
-                console.log("la letra "+luser+" se encuentra en la posición "+(n+1))
                 espacios= espacios.substring(0,n)+luser+espacios.substring(n+1,palabras[i].length)
             }
-            console.log(espacios)
         }
+        console.log(espacios)
         //si no has acertado aumenta los intentos.
         if (fallo && !aciertos.includes(luser)) {
             intentos++
