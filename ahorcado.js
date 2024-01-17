@@ -7,7 +7,6 @@ let i = 0
 let puntos = 0
 //Referencia a la funcion que escoge una palabra aleatoria
 escogerPalabra(palabras)
-console.log(palabras[i])
 let intentos = 0
 let luser
 let letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -17,9 +16,8 @@ let espacios = "_"
 for (let f = 1; f < palabras[i].length; f++) {
     espacios = espacios.concat("_")
 }
-console.log(espacios)
 //Bucle general que comprueba las vidas y si has acertado la palabra.
-while (intentos !== 6 || !espacios===palabras[i]) {
+while (intentos !== 6 && espacios!=palabras[i]) {
     fallo = true
     //Dibuja a Pedro en función de cuantas veces se ha fallado
     DibujarPedro()
