@@ -1,6 +1,5 @@
 const sc = require("prompt-sync")({ sigint: true })
 //Array de posibles palabras para jugar.
-//Array barrabajas 
 const palabras = ["virginia", "estafa", "españoles", "ransomware", "manzana", "secreta", "osteoporosis", "xilofono", "seguridad", "alexander"]
 let fallo = true
 let i = 0
@@ -54,7 +53,6 @@ while (intentos !== 6 && espacios!=palabras[i]) {
             console.log("Has perdido una vida, ahora tienes " + intentos + " fallo/s, no puedes llegar a seis")
         }
         console.log("Has acertado " + puntos + " letra/s")
-        
     }
 
 }
@@ -86,33 +84,16 @@ function contarVocales() {
     console.log("El número total de vocales es: " + numVocales);
 }
 function validarUsuario(){
-    // esta funcion valida que el usuario solo pueda escribir una letra por turno o la palabra pista pero que no pueda escribir numero y convierte las letras a minuscula
+    //Esta funcion valida que el usuario solo pueda escribir una letra por turno o la palabra pista pero que no pueda escribir numero y convierte las letras a minuscula
     if(!Number(luser) && luser.length==1 || luser=="pista"){
         luser=luser.toLowerCase();
 
     }else{
         console.log("Error, debes introducir una letra o la palabra pista");
-        fallo=false //ponemos los fallos en false para que no nos quite vida
+        fallo=false //Ponemos los fallos en false para que no nos quite vida
     }
 }
 //
-
-//function filtro() {
-//    let escogida =[palabras[i]]
-//    escogida.filter()
-//}
-//function repetirLetra() {
-//    console.log(palabras[i].split('a').length-1)
-//    let repes =[]
-//    let letras=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-//    //push nuevo array palabras spliteadas, cada letra lenght con for para contar numero letras repes
-//    for (let z = 0; z < letras.length; z++) {
-//        if (z) {
-//            repes.push(palabras[i].charAt(n))
-//
-//        }
-//    }
-//}
 
 // Funciones de Dibujar ASCII ||
 function DibujarPedro() {
