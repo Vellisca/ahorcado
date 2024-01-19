@@ -9,7 +9,6 @@ escogerPalabra(palabras)
 let intentos = 0
 let luser
 let letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-console.log(palabras[i])
 let aciertos = []
 let espacios = "_"
 for (let f = 1; f < palabras[i].length; f++) {
@@ -19,7 +18,7 @@ for (let f = 1; f < palabras[i].length; f++) {
 while (intentos !== 6 && espacios!=palabras[i]) {
     fallo = true
     //Dibuja a Pedro en función de cuantas veces se ha fallado
-    DibujarPedro()
+    dibujarPedro()
     luser = sc("Escribe una letra y así salvarás a Pedro, escribe pista si necesitas ayuda -> ")
     validarUsuario();
     //Si el user escribe pista le dice las vocales que tiene la palabra
@@ -59,10 +58,10 @@ while (intentos !== 6 && espacios!=palabras[i]) {
 if (intentos >= 6) {
     console.log("Has perdido...")
     console.log("")
-    DibujarPedro()
+    dibujarPedro()
 } else {
     console.log("Pedro ha sobrevivido. Enhorabuena")
-    DibujarExito()
+    dibujarExito()
 }
 //Funcion que escoge Palabra aleatoria del Array Palabras
 function escogerPalabra(palabras) {
@@ -96,7 +95,7 @@ function validarUsuario(){
 //
 
 // Funciones de Dibujar ASCII ||
-function DibujarPedro() {
+function dibujarPedro() {
     if (intentos == 0) {
         console.log("  +---+")
         console.log("  |   |")
@@ -161,7 +160,7 @@ function DibujarPedro() {
         console.log("=========")
     }
 }
-function DibujarExito() {
+function dibujarExito() {
     console.log(" ⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⢀⣠⣤⣶⣶⣶⣦⣄⡀⠀⠀⠀⠀⠀⣠⣴⣾⣿⣿⣿⣷⣦⡀")
     console.log("⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿⣾⣆⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⣨⣿⣿⣿⠿⠿⢿⣿⣿⣿")
     console.log("⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⠋⠀⣠⣾⣿⣿⡿⠉⠉⠻⣿⣿⣿⣿⠀⢀⣾⣿⣿⡿⠃⠀⠀⠀⣿⣿⣿")
