@@ -1,6 +1,9 @@
 const sc = require("prompt-sync")({ sigint: true })
 //Array de posibles palabras para jugar.
-const palabras = ["virginia", "estafa", "españoles", "ransomware", "manzana", "secreta", "osteoporosis", "xilofono", "seguridad", "alexander"]
+const palabras = [
+    "estafa", "ransomware", "manzana", "secreta", "osteoporosis", "xilofono", "seguridad",
+    "alexander", "pera", "paralelepipedo", "alopecia", "mondongo", "antropomorfo", "zocalo",
+    "halcon", "aguila", "brujula", "confianza","elixir","whisky","elipse","cuadrilatero","jengibre"]
 let fallo = true
 let i = 0
 let puntos = 0
@@ -15,7 +18,7 @@ for (let f = 1; f < palabras[i].length; f++) {
     espacios = espacios.concat("_")
 }
 //Bucle general que comprueba las vidas y si has acertado la palabra.
-while (intentos !== 6 && espacios!=palabras[i]) {
+while (intentos !== 6 && espacios != palabras[i]) {
     fallo = true
     //Dibuja a Pedro en función de cuantas veces se ha fallado
     dibujarPedro()
@@ -41,8 +44,8 @@ while (intentos !== 6 && espacios!=palabras[i]) {
                 }
             }
             //Muestra de las letras acertadas su posición. 
-            if (luser==palabras[i].charAt(n)) {
-                espacios= espacios.substring(0,n)+luser+espacios.substring(n+1,palabras[i].length)
+            if (luser == palabras[i].charAt(n)) {
+                espacios = espacios.substring(0, n) + luser + espacios.substring(n + 1, palabras[i].length)
             }
         }
         console.log(espacios)
@@ -57,7 +60,7 @@ while (intentos !== 6 && espacios!=palabras[i]) {
 }
 if (intentos >= 6) {
     console.log("Has perdido...")
-    console.log("")
+    console.log("La palabra que tenías que poner era " + palabras[i] + " más suerte a la próxima...")
     dibujarPedro()
 } else {
     console.log("Pedro ha sobrevivido. Enhorabuena")
@@ -82,14 +85,14 @@ function contarVocales() {
     }
     console.log("El número total de vocales es: " + numVocales);
 }
-function validarUsuario(){
+function validarUsuario() {
     //Esta funcion valida que el usuario solo pueda escribir una letra por turno o la palabra pista pero que no pueda escribir numero y convierte las letras a minuscula
-    if(!Number(luser) && luser.length==1 || luser=="pista"){
-        luser=luser.toLowerCase();
+    if (!Number(luser) && luser.length == 1 || luser == "pista") {
+        luser = luser.toLowerCase();
 
-    }else{
+    } else {
         console.log("Error, debes introducir una letra o la palabra pista");
-        fallo=false //Ponemos los fallos en false para que no nos quite vida
+        fallo = false //Ponemos los fallos en false para que no nos quite vida
     }
 }
 //
